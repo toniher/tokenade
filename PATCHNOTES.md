@@ -1,4 +1,6 @@
 # Tokenade — what's new
+## Unreleased
+- opencode 2: the plugin bridge now resets the savings ledger on the 2.x compaction event (`session.compaction.ended`, `event.data.sessionID`) and folds a structured shell `output` when the host's `result.content` is empty. Both were silent no-ops: the bridge listened for 1.x's removed `session.compacted` event, and accepted only a string `output`.
 ## 2.0.3
 - After a successful `tokenade install` (or, if that run was not in a terminal, the first `tokenade dashboard` with saved tokens to show), one line says Tokenade is open source and links the GitHub repository. Shown once per machine, never when stdout is not a terminal or under CI, and `TOKENADE_NO_STAR_INVITE=1` turns it off. It makes no network call.
 
